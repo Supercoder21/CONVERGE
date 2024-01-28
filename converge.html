@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Innovations</title>
+
+  <!-- Add Bootstrap JS, jQuery, and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            text-align: center;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            background: linear-gradient(90deg, #3b5998 0%, #00aced 100%);
+            color: #fff;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+            color: #333;
+        }
+
+        #content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        #normalText {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 30px;
+            opacity: 0.8;
+        }
+
+        #message {
+            font-size: 2.5em;
+            color: #3b5998;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        #footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #ccc;
+        }
+
+        h1, h2 {
+            color: #00aced;
+        }
+
+        p {
+            color: #555;
+        }
+
+        #footer p {
+            margin: 0;
+        }
+
+        #footer a {
+            color: #00aced;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" onclick="revealMessage()">
+        <h1 class="mb-4">Quantum Softwares</h1>
+        <div id="normalText">
+            <p>At Quantum Innovations, we are pioneers in cutting-edge technology, pushing the boundaries of what's
+                possible...</p>
+            <p>Quantum Technology is a rapidly changing field, and we are here to make the speedy fast change a bit more
+                slower</p>
+            <!-- Your Quantum Innovations content goes here -->
+            <p>Our technology is reliable and safe. It has been tested many times, on many different areas. We even
+                have an AI system!</p>
+            <p>Join our daily news letter for more exciting news. As always, it is extremely safe and privacy oriented</p>
+            <p>We have discovered much in many fields, such as astronomy, hummanities, and physics. Implemet our tech everywhere!</p>
+            <p>Special Thanks to our founders, who have spend countless hours writing code for our quantum tecnology, we owe great thanks<p>
+            <p>Now, it's up to you to implemet our technology. Spread the word through countless social media platforms, such as YouTube<p>
+            <p>As you explore Quantum Innovations, keep your eyes peeled for subtle anomalies and unexpected patterns. The
+                Quantum Universe may reveal more than meets the eye. Pay close attention to every detail – you never
+                know what secrets may be hidden in plain sight.</p>
+
+            <h2 class="mt-4">Quantum Innovations - Shaping Tomorrow, Today.</h2>
+        </div>
+        <div id="message" class="font-weight-bold mt-4">Quantum For The Win!</div>
+    </div>
+
+    <script>
+        let messageIndex = 0;
+        const messages = [
+            "We",
+            "are",
+            "family.",
+            "Do",
+            "not",
+            "run",
+            "away.",
+            "@F-A-M-I-L-Y-"
+        ];
+
+        function revealMessage() {
+            const bodyElement = document.body;
+            const normalTextElement = document.getElementById('normalText');
+            const messageElement = document.getElementById('message');
+
+            // Hide a portion of the normal text with each click
+            normalTextElement.innerHTML = normalTextElement.innerHTML.replace(/<p>[^<]*<\/p>/, '');
+
+            // Reveal the next part of the hidden message
+            messageElement.innerText = messages[messageIndex];
+            messageIndex++;
+
+            // Gradually change background and text color after updating content
+
+            if (messageIndex === messages.length) {
+                messageIndex = 0; // Reset index after revealing the entire message
+            }
+        }
+    </script>
+
+    <div id="footer">
+        <p class="text-muted">&copy; 2024 QUANTUM Website. All rights reserved. |</p>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+
+</body>
+
+</html>
